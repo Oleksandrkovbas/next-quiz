@@ -1,0 +1,55 @@
+.QuizModal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  flex-basis: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+.QuizModal *,
+.QuizModal *:after,
+.QuizModal *:before {
+  box-sizing: border-box;
+}
+.QuizModal .modal-wrapper {
+  background-color: transparent;
+  margin: auto;
+  border: none;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  flex-basis: 100%;
+  max-width: 100%;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.QuizModal .modal-wrapper .modal-container {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.QuizModal .modal-wrapper .modal-container iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.QuizModal .close:hover,
+.QuizModal .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=modal.css.map */

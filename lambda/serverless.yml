@@ -1,0 +1,25 @@
+service: Quiz
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  environment:
+    apiUrl: ${file(./env.${opt:stage, self:provider.stage, 'dev'}.json):apiUrl}
+    username: ${file(./env.${opt:stage, self:provider.stage, 'dev'}.json):username}
+    password: ${file(./env.${opt:stage, self:provider.stage, 'dev'}.json):password}
+
+functions:
+  contact:
+    handler: handler.handler
+    events:
+      - http:
+          path: contact
+          method: POST
+          cors: true
+
+custom:
+  serverless-offline:
+    httpPort: 3099
